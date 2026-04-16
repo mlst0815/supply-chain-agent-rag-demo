@@ -1,0 +1,120 @@
+{
+  "question": "华东仓SKU-C连续缺货并导致订单延迟，请给我一份处理建议和证据",
+  "focus_areas": [
+    "stockout",
+    "delay"
+  ],
+  "summary": "针对问题“华东仓SKU-C连续缺货并导致订单延迟，请给我一份处理建议和证据”，当前最值得优先处理的是 WH-East 的 SKU-C 缺货风险以及 DeltaFlex 的交期波动。整体服务水平为 88.7%，准时交付率为 50.0%。结合知识库文档 Delay Management SOP、Inventory Stockout Recovery SOP，建议先做缺货止血，再做交期归因和 KPI 常态化跟踪。",
+  "actions": [
+    "针对 WH-East 的 SKU-C 立即触发加急补货，并将低优先级订单转移到有余量仓库。",
+    "把安全库存阈值从静态规则调整为滚动 4 周需求驱动，并建立缺货预警。",
+    "对 East 区域建立 24 小时履约异常看板，按订单老化时间触发人工升级。",
+    "将延迟原因拆分到仓内作业、承运商、供应商三个责任域，避免异常被统一归类。"
+  ],
+  "evidence": [
+    "整体服务水平为 88.7%，准时交付率为 50.0%。",
+    "当前平均延迟时长为 14.9 小时，最弱区域为 North。",
+    "延迟风险最高的供应商为 DeltaFlex。",
+    "库存最危险组合是 WH-East / SKU-C，现货 35，安全库存 90，覆盖率 0.39。",
+    "由缺货引发的延迟订单共有 6 单。",
+    "East 区域平均延迟 14.3 小时，明显高于其他区域。"
+  ],
+  "retrieved_docs": [
+    {
+      "title": "Delay Management SOP",
+      "summary": "用于处理履约晚到、仓内积压与运输异常的标准流程。",
+      "path": "F:\\python code\\supply-chain-agent-rag-demo\\knowledge_base\\delay_management_sop.md",
+      "score": 8,
+      "matched_keywords": [
+        "延迟",
+        "delay"
+      ]
+    },
+    {
+      "title": "Inventory Stockout Recovery SOP",
+      "summary": "用于处理高风险 SKU 缺货、补货不足与安全库存失效问题。",
+      "path": "F:\\python code\\supply-chain-agent-rag-demo\\knowledge_base\\inventory_stockout_sop.md",
+      "score": 8,
+      "matched_keywords": [
+        "缺货",
+        "stockout"
+      ]
+    },
+    {
+      "title": "Weekly KPI Review Template",
+      "summary": "用于周会汇报的供应链核心 KPI 模板。",
+      "path": "F:\\python code\\supply-chain-agent-rag-demo\\knowledge_base\\weekly_kpi_template.md",
+      "score": 3,
+      "matched_keywords": []
+    }
+  ],
+  "dashboard": {
+    "service_level": 0.8868,
+    "on_time_rate": 0.5,
+    "avg_delay_hours": 14.9167,
+    "worst_region": "North",
+    "worst_supplier": "DeltaFlex",
+    "critical_skus": [
+      {
+        "warehouse": "WH-East",
+        "sku": "SKU-C",
+        "on_hand": 35,
+        "safety_stock": 90,
+        "lead_time_days": 12,
+        "coverage_ratio": 0.3888888888888889,
+        "supplier": "DeltaFlex"
+      },
+      {
+        "warehouse": "WH-North",
+        "sku": "SKU-D",
+        "on_hand": 52,
+        "safety_stock": 95,
+        "lead_time_days": 10,
+        "coverage_ratio": 0.5473684210526316,
+        "supplier": "NorthLine"
+      },
+      {
+        "warehouse": "WH-North",
+        "sku": "SKU-G",
+        "on_hand": 48,
+        "safety_stock": 60,
+        "lead_time_days": 7,
+        "coverage_ratio": 0.8,
+        "supplier": "FastMove"
+      },
+      {
+        "warehouse": "WH-East",
+        "sku": "SKU-F",
+        "on_hand": 75,
+        "safety_stock": 85,
+        "lead_time_days": 6,
+        "coverage_ratio": 0.8823529411764706,
+        "supplier": "PrimePack"
+      },
+      {
+        "warehouse": "WH-South",
+        "sku": "SKU-F",
+        "on_hand": 88,
+        "safety_stock": 80,
+        "lead_time_days": 6,
+        "coverage_ratio": 1.1,
+        "supplier": "PrimePack"
+      }
+    ],
+    "delayed_stockout_orders": 6,
+    "top_delay_reasons": [
+      {
+        "exception_reason": "stockout",
+        "orders": 6
+      },
+      {
+        "exception_reason": "supplier_delay",
+        "orders": 3
+      },
+      {
+        "exception_reason": "carrier_delay",
+        "orders": 2
+      }
+    ]
+  }
+}

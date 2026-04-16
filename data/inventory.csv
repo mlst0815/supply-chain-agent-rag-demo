@@ -1,0 +1,13 @@
+snapshot_date,warehouse,sku,on_hand,safety_stock,inbound_qty,lead_time_days,supplier
+2026-04-12,WH-East,SKU-A,210,160,120,4,Alpha Manufacturing
+2026-04-12,WH-East,SKU-C,35,90,40,12,DeltaFlex
+2026-04-12,WH-East,SKU-F,75,85,30,6,PrimePack
+2026-04-12,WH-North,SKU-D,52,95,45,10,NorthLine
+2026-04-12,WH-North,SKU-G,48,60,20,7,FastMove
+2026-04-12,WH-South,SKU-B,185,150,80,5,Beta Components
+2026-04-12,WH-South,SKU-E,140,110,60,4,Sunrise Parts
+2026-04-12,WH-South,SKU-F,88,80,40,6,PrimePack
+2026-04-12,WH-West,SKU-A,195,140,90,4,Alpha Manufacturing
+2026-04-12,WH-West,SKU-B,170,145,70,5,Beta Components
+2026-04-12,WH-West,SKU-C,120,85,50,12,DeltaFlex
+2026-04-12,WH-West,SKU-E,130,100,55,4,Sunrise Parts
